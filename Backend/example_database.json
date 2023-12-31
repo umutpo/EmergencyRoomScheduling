@@ -1,0 +1,76 @@
+{
+    "hospital": {
+        "name": "Arnavutkoy Devlet Hastanesi",
+        "start_time": "0900",
+        "end_time": "2100",
+        "headcount": 5,
+        "stations": [
+            {
+                "name": "S-1",
+                "slots": [
+                    {
+                        "slot_index": 0,
+                        "assignee_id": "1234"
+                    },
+                    {
+                        "slot_index": 2,
+                        "assignee_id": "1445"
+                    }
+                ]
+            },
+            {
+                "name": "S-2",
+                "slots": [
+                    {
+                        "slot_index": 1,
+                        "assignee_id": "2445"
+                    }
+                ]
+            },
+            {
+                "name": "Y-1",
+                "slots": [
+                    {
+                        "slot_index": 0,
+                        "assignee_id": "2345"
+                    },
+                    {
+                        "slot_index": 4,
+                        "assignee_id": "6789"
+                    },
+                    {
+                        "slot_index": 3,
+                        "assignee_id": "2345"
+                    }
+                ]
+            }
+        ],
+        "employees": [
+            {
+                "id": "1234",
+                "name": "Agahan",
+                "score": 0
+            },
+            {
+                "id": "2345",
+                "name": "Bugra",
+                "score": 0
+            },
+            {
+                "id": "6789",
+                "name": "Saltuk",
+                "score": 0
+            },
+            {
+                "id": "2445",
+                "name": "Umut",
+                "score": 0
+            },
+            {
+                "id": "1445",
+                "name": "Doruk",
+                "score": 0
+            }
+        ]
+    }
+}
