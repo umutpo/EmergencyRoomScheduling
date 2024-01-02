@@ -1,56 +1,6 @@
-import datetime
 import random
 
-from typing import Dict, List
-
-# We are a company that works from 9am to 1am each day in total 16 hours. 
-# In 6 different stations named: S-1, S-2, Y-1, Y-2, Y-3, and Y-4. 
-# 12 workers are working each day. But sometimes 13 workers so our shift times and worker number must be flexible and be changeable by admin before each working day. 
-# Each day admin sends the link to the WhatsApp group and each worker opens the page and first types their name, second chooses the preferred slot for S-1, and backup choice S-1 and then respectively for other stations. 
-# when every worker changes their preferred slot no more answers are accepted. 
-# Then if there are workers that choose the same slot there will be a ballot between them. 
-# The loser was assigned to a second choice, if there others selected that spot they were assigned to a random spot. 
-# But due to workflow after a worker completes S-1 or S-2 the next shift have to be S-2 or S-1 or free shift. 
-
-# Utility Data Structure    
-class Employee:
-    id: int
-    name: str
-    score: int
-
-class Manager:
-    employee: Employee
-
-# Station Data Structure
-class StationSlot:
-    slot_index: int
-    assignee_id: str
-
-class Station:
-    name: str
-    slots: List[StationSlot]
-
-class Schedule:
-    date: datetime.date
-    start_time: datetime.time
-    shift_length: datetime.time
-    daily_stations: List[Station]
-    daily_employees: List[Employee]
-
-class Hospital:
-    name: str
-    permanent_employees: List[Employee]
-    schedules: Dict[datetime.date, Schedule]
-
-# Preference Data Structure
-class PreferenceSlot:
-    station_name: str
-    first_choice_slot_index: int
-    second_choice_slot_index: int
-
-class Preference:
-    owner_id: str
-    slots: List[PreferenceSlot]
+from Utility.types import *
 
 def allocateSlots(station_names: List[str], preferences: List[Preference], num_slots: int) -> List[Station]:
     allocated_stations = []
